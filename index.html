@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="main-controls">
+
+            <label>APPEARANCE</label>
+            <select id="scale" onchange="YAxisMarks()">
+                <option value="Linear">Scale: Linear</option>
+   
+                <option value="Mel" selected>Scale: Mel</option>
+            </select>
+            <select id="f_min">
+                
+                <option value="10">Min Freq: 10 Hz</option>
+                <option value="20">Min Freq: 20 Hz</option>
+                <option value="30">Min Freq: 30 Hz</option>
+                <option value="40">Min Freq: 40 Hz</option>
+                <option value="50" selected>Min Freq: 50 Hz</option>
+                <option value="80">Max Freq: 80 Hz</option>
+                <option value="100">Min Freq: 100 Hz</option>
+            </select>
+            <select id="f_max">
+                <option value="1000">Max Freq: 1 KHz</option>
+                <option value="2000">Max Freq: 2 KHz</option>
+                <option value="3000">Max Freq: 3 KHz</option>
+                <option value="4000">Max Freq: 4 KHz</option>
+                <option value="5000">Max Freq: 5 KHz</option>
+                <option value="10000"selected>Max Freq: 10 KHz</option>
+                <option value="15000">Max Freq: 15 KHz</option>
+                <option value="20000">Max Freq: 20 KHz</option>
+            </select>
+            <select id="speed" onchange="PlotSpectro1()">
+                <option value="1">Speed: 1</option>
+                <option value="2" >Speed: 2</option>
+                <option value="3">Speed: 3</option>
+                <option value="4" selected>Speed: 4</option>
+                <option value="5">Speed: 5</option>
+            </select>
+            <select id="colormap" onchange="plot_colormap()">
+                <option value="jet">Colormap: jet</option>
+                <option value="hot" selected>Colormap: hot</option>
+                <option value="Greens" >Colormap: Greens</option>
+                <option value="summer" >Colormap: summer</option>
+                <option value="viridis">Colormap: viridiis</option>
+                <option value="turbo">Colormap: turbo</option>
+                <option value="Blues">Colormap: Blues</option>
+
+                <option value="terrain">Colormap: terrain</option>
+                <option value="winter">Colormap: winter</option>
+                <option value="binary">Colormap: binary</option>
+                <option value="RdPu">Colormap: RdPu</option>
+                <option value="gist_gray" >Colormap: gist_gray</option>
+
+            </select>
+
+            <label>Sensibility </label><input id="sensibility" type="range" value="60" min="10" max="100" oninput="this.nextElementSibling.value = this.value">
+            <output id="output_sensibility"> 60 </output> dB
+            <label>Scrolling</label><input type="checkbox" id="scrolling" checked> <label>Pause </label>
+            <input type="checkbox" id="stop">
+            <br>
+            <label>SPECTOGRAM PARAMETERS </label>
+            <select id="sizeFFT" onchange="callback(stream)">
+                <option value="2048">Buffer Size: 2048</option>
+                <option value="4096" >Buffer Size: 4096</option>
+                <option value="8192"selected >Buffer Size: 8192</option>
+                
+            </select>
+            <select id="window">
+                <option value="None">Window: None</option>
+                <option value="Cosine">Window: Cosine</option>
+                <option value="Hanning">Window: Hanning</option>
+                <option value="BH7" selected>Window: Blackman Harris 7</option>
+            </select>
+            <select id="FFT" onchange="SetDefaultWindow()">
+                <option value="myFFT" selected>FFT Function: Custom FFT</option>
+                <option value="WebAudio">FFT Function: Web Audio</option>
+            </select>
+
+            <br>
+            <label>GENERAL </label>
+            <input type="button" value="Info" onclick="DisplayMultiLineAlert()" />
+
+        </div>
+        <div id="block_container">
+            <canvas class="canvas" style="border:3px solid;"></canvas>
+        </div>
+    </div>
+    <script src="./js-colormaps.js"></script>
+    <script src="./spectrogram.js"></script>
+
+</body>
+
+</html>
