@@ -19,7 +19,7 @@ The loudness scales in dB units are not calibrated.
 
 ## Demo
 
-**[https://lvillasen.dds.net/MicFFT.html](https://lvillasen.dds.net/MicFFT.html)**
+**[https://lvillasen.ddns.net/MicFFT.html](https://lvillasen.ddns.net/MicFFT.html)**
 
 
 ## Credits
