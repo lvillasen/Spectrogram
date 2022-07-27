@@ -239,7 +239,9 @@ function callback(stream) {
             canvasCtx.font = '10px serif';
         }
         var centro = (border_canvas_plot_top + canvas.height / 10) / 2;
-        canvasCtx.fillText(Math.round(frec_max1).toString() + " Hz", canvas.width / 40, centro);
+        //canvasCtx.fillText(Math.round(frec_max1).toString() + " Hz", canvas.width / 40, centro);
+        canvasCtx.textAlign = 'right';
+        canvasCtx.fillText(Math.round(frec_max1).toString() + " Hz", canvas.width / 8, centro);
 
         var media = "desktop";
 
@@ -592,6 +594,9 @@ function YaxisMarks() {
     if (canvas.width < 500) {
         canvasCtx.font = '5px serif';
     }
+    canvasCtx.textAlign = 'right';
+
+
     if (document.getElementById("scale").value == "Linear") {
         var Yaxis = new Array;
         Yaxis = [100, 500, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500, 9000, 9500, 10000, 11000, 12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000, 20000];
@@ -601,7 +606,9 @@ function YaxisMarks() {
 
             if (Yaxis[j] <= f_max) {
                 canvasCtx.textBaseline = "middle";
-                canvasCtx.fillText(Yaxis[j].toString() + " Hz", X0 - 1. * border_canvas_plot_left, y);
+                //canvasCtx.fillText(Yaxis[j].toString() + " Hz", X0 - 1. * border_canvas_plot_left, y);
+                canvasCtx.fillText(Yaxis[j].toString() + " Hz", X0 - border_canvas_plot_top, y);
+
             }
             //canvasCtx.fillText(Yaxis[j].toString() + " Hz", X0 - 1. * border_canvas_plot_left, y + canvas.height / 200);
             //canvasCtx.fillText("Hola", .4 * canvas.width / 10, .4 * canvas.height / 10)
@@ -634,7 +641,8 @@ function YaxisMarks() {
             //var y = y0 - deltaY0 * (Math.log(Yaxis[i]) - Math.log(f_min)) / (Math.log(f_max) - Math.log(f_min));
             if (Yaxis[j] <= f_max) {
                 canvasCtx.textBaseline = "middle";
-                canvasCtx.fillText(Yaxis[j].toString() + " Hz", X0 - 1. * border_canvas_plot_left, y);
+                //canvasCtx.fillText(Yaxis[j].toString() + " Hz", X0 - 1. * border_canvas_plot_left, y);
+                canvasCtx.fillText(Yaxis[j].toString() + " Hz", X0 - border_canvas_plot_top, y);
             }
             canvasCtx.strokeStyle = "black";
             canvasCtx.beginPath();
@@ -755,6 +763,7 @@ function ColormapMarks() {
     }
     canvasCtx.textBaseline = "middle";
     var dB = Math.max(sensibility_temp, max_intensity);
+    canvasCtx.textAlign = 'left';
     canvasCtx.fillText(Math.floor(dB) + " dB", x0, Y0)
     canvasCtx.fillText(Math.floor(.75 * dB) + " dB", x0, Y0 + .25 * deltaY0)
     canvasCtx.fillText(Math.floor(.5 * dB) + " dB", x0, Y0 + .5 * deltaY0)
@@ -766,7 +775,7 @@ function ColormapMarks() {
     if (canvas.width < 500) {
         canvasCtx.font = '5px serif';
     }
-
+    canvasCtx.textAlign = 'left';
     canvasCtx.fillText("Time", canvas.width / 2, canvas.height - .5 * border_canvas_plot_bottom + 10);
     canvasCtx.fillText("Loudness (dB)", 10, canvas.height - .5 * border_canvas_plot_bottom + 10);
     canvasCtx.fillText("Loudness Color", canvas.width - border_canvas_plot_right, canvas.height - .5 * border_canvas_plot_bottom + 10);
