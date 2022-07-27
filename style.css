@@ -30,13 +30,13 @@
                                                                                     
                                                                                     #block_container {
                                                                                         width: 100%;
-                                                                                        height: 90%;
+                                                                                        height: 80%;
                                                                                         justify-content: center;
                                                                                     }
                                                                                     
                                                                                     .main-controls {
                                                                                         width: 100%;
-                                                                                        height: 10%;
+                                                                                        height: 20%;
                                                                                         justify-content: left;
                                                                                         margin-left: 5%;
                                                                                     }
