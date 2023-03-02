@@ -17,9 +17,10 @@ On the upper left corner it displays the instantaneous value of the frequency wi
 
 The loudness scales in dB units are not calibrated.
 
-## Demo
+## Usage
 
-**[https://lvillasen.ddns.net/MicFFT.html](https://lvillasen.ddns.net/MicFFT.html)**
+- Clone the repository
+- Open the index.html file with any navigator
 
 
 ## Credits
