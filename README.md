@@ -24,8 +24,7 @@ The loudness scales in dB units are not calibrated.
 
 ## Live Demo
 
-https://ciiec.buap.mx/Spectrogram/index.html
-
+https://ciiec.buap.mx/Spectrogram/
 
 ## Credits
 
