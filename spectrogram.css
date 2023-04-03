@@ -1,0 +1,37 @@
+                                                                                
+body {
+    background-color: #00b5e2;
+}
+
+canvas {
+    background-color: black;
+
+    padding-left: 0;
+    padding-right: 0;
+
+    margin-left: 0%;
+    margin-right: 0%;
+    display: block;
+    width: 100%;
+
+    border:3px solid #d3d3d3;
+}
+
+block_container {
+
+}
+
+h1 {
+    font-size: 30pt;
+    font-family: arial;
+    color: black;
+    text-align: center;
+}
+
+h2 {
+    font-size: 15pt;
+    font-family: arial;
+    color: black;
+    text-align: center;
+}
+
