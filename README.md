@@ -30,7 +30,7 @@ https://ciiec.buap.mx/Spectrogram/
 
 - We use the Web Audio API (https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
 
-- The colormap function is taken from https://github.com/timothygebhard/js-colormaps
+- The colormaps were taken from https://github.com/timothygebhard/js-colormaps
 
 - It uses the custom FFT function from https://github.com/lvillasen/FFT.js
 
