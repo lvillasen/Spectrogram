@@ -20,7 +20,7 @@ The loudness scales in dB units are not calibrated.
 ## Usage
 
 - Clone the repository
-- Open the index.html file with any navigator
+- Open the file index.html with any web browser
 
 ## Live Demo
 
