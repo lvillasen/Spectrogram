@@ -2,7 +2,7 @@
 
 Live sound spectrogram in JavaScript. It can be configured to change buffer size,  FFT function, colormap, window type, minimum and maximum frequencies, loudness sensibility, scrolling direction, scrolling speed and pause scrolling.
 
-It has the option to display frequencies in linear mode or in Mel scale (logarithmic scale, see https://en.wikipedia.org/wiki/Mel_scale). However, it does not implement a short time Fourier transform. 
+It has the option to display frequencies in linear mode or in Mel scale (logarithmic scale, see https://en.wikipedia.org/wiki/Mel_scale). 
 
 
 You can easily add new colormaps, for example to add the colormap "PuBu" add
